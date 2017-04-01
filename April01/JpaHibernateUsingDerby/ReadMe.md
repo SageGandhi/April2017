@@ -1,0 +1,3 @@
+01.Derby Downloaded From https://db.apache.org/derby/releases/release-10.13.1.1.cgi.
+02.Derby Started Using G:\WsApril17\DbDerby101311\bin\startNetworkServer.bat Script.See ScreenShot DerbyStarted.png.I Use It With Default Values.
+03.Ddl Will Be Generated Automatically.Please Refer javax.persistence.schema-generation.database.action,javax.persistence.schema-generation.scripts.action.Location Is As Follows:javax.persistence.schema-generation.scripts.create-target,javax.persistence.schema-generation.scripts.drop-target.I Find It Helpful For Learning. 
