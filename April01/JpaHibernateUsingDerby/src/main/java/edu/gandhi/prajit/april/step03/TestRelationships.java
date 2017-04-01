@@ -4,6 +4,6 @@ import javax.persistence.Persistence;
 
 public class TestRelationships {
 	public static void main(String[] args) {
-		Persistence.createEntityManagerFactory("JpaTryOut01RelationshipMto").createEntityManager();
+		Persistence.createEntityManagerFactory("JpaTryOut01RelationshipOto").createEntityManager();
 	}
 }

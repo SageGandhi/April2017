@@ -3,6 +3,7 @@ package edu.gandhi.prajit.april.step03.entity.mto;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 /**
  * CREATE TABLE EMPLOYEEVERSION01 (ID BIGINT NOT NULL, DEPARTMENTVERSION01_ID BIGINT, PRIMARY KEY (ID))
@@ -14,6 +15,7 @@ public class EmployeeVersion02 {
 	@GeneratedValue
 	private Long id;
 	@ManyToOne
+	@JoinColumn(name="DeptId")
 	private DepartmentVersion02 departmentVersion02;
 
 	/**
