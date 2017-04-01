@@ -1,6 +1,22 @@
 01.Derby Downloaded From https://db.apache.org/derby/releases/release-10.13.1.1.cgi.
+
 02.Derby Started Using G:\WsApril17\DbDerby101311\bin\startNetworkServer.bat Script.See ScreenShot DerbyStarted.png.I Use It With Default Values.
+
 03.Ddl Will Be Generated Automatically.Please Refer javax.persistence.schema-generation.database.action,javax.persistence.schema-generation.scripts.action.Location Is As Follows:javax.persistence.schema-generation.scripts.create-target,javax.persistence.schema-generation.scripts.drop-target.I Find It Helpful For Learning.
+
 04.Jsr338(ToDo:MustRead):Specification.Standardized By Java Community Process.Jpa Needs A Runtime Provider Which Will Implement Jpa Specification.3 Implementation Are Available.EclipseLink,Hibernate,Apache OpenJpa.No Vendor Locking Benefit.
+
 05.Managed Set Of Entities Is Called Persistence Context.Persistence Unit Is The Name For This Configuration.EntityManager Does Not Have Any Update Method.EntityManager Tracked When An Update Made To An Entity(Possibly Via Proxy).EntityManager Only Have persit,find & remove,merge(Method That Maked Detached Entity To Managed Entity) Method.
-06.Jpa Use Convention Over Cofiguration/Configuration Is An Exception.Provider Apply This Default Rule.String(Varchar(255)).Annotation Can Be Applied On Field&Getters.Xml Overrides & Takes Precedence Over Annotation Metadata.If Database Info Got Changed Over Different Region Xml Usage.   
+
+06.Jpa Use Convention Over Cofiguration/Configuration Is An Exception.Provider Apply This Default Rule.String(Varchar(255)).Annotation Can Be Applied On Field&Getters.Xml Overrides & Takes Precedence Over Annotation Metadata.If Database Info Got Changed Over Different Region Xml Usage. 
+
+07.Direction:Traverse One Object From Another.UniDirectional/BiDirectional(Two UniDirectional).Cardinality(How Many Association Between Object).In Dbms Its Done By Primary Key,Foreign Key.In Oop Its Done By JoinColumn & JoinTable.
+
+08.Every Story Has 3 Side(Yours,Mine,The Truth).First Is The View From One Side Of The Relationship,Second Is The View From Other Side Of The Relationship,Third One Is The Global Perspective That Knows About Both Side.Sides Are Called Role.One Entity Can Play Different Role In Different RelationShip.(Employee Entity Can Have Different Role In Department,Project,Even With Another Employee Entity As A Manager.).
+
+09.Directionality:If Each Entity Point Back To Other Entity In A Relation Its BiDirectional.If Only One Entity Has A Pointer Then Its UniDirectional.Think Every BiDirectional Relationships As A Pair Of UniDirectional Relationship.So Based On Directionality We Refer One As Source Entity,Another One As Target Entity.Ex. Employee(Source) Works On A Project(Target),Project(Source) Consist Of Employees(Target).
+
+10.Single Valued Association(OneToOne,ManyToOne):In Dbms Foreign Key Implements The Relationship.In Jpa Term That Is JoinColumn.JoinColumn Can Be Part Of Different Table Like JoinTable.Now One Of The Two Side Will Have JoinColumn/ForeignKey Is Called OwningSide/Owner Of The Relationship.Otherside Of The Relationship Called NonOwning/Inverse Side.Cardinal Annotation(OneToOne,OneToMany,ManyToOne,ManyToMany) Are Logical Annotation.But Physical Annotation Like JoinColumn/JoinTable Applies In The Owning Side.
+For ManyToOne Relation Physical Annotation Mapping Will Be Always On Many Side.Employee->Department Is ManyToOne.In Db Employee Will Hold The Foreign Key For Department,No Otherway Around.As Employee Holds The Foreign Key,Employee Will Be Owning/Source Entity.JoinColumn Will Be The Foreign Key Column Name In Source Entity Table.JoinColumn Is Not Required But Only To Override Column Name.Default Rule As Follows:<Name Of The Relationship Attribute In Source Entity>_<Name Of The Primary Key Column In Target Entity>.In Our Case Let Say Employee Entity Have private Department department;(<Name Of The Relationship Attribute In Source Entity>) & Suppose Department Has private String id;As Primary Key Column<Name Of The Primary Key Column In Target Entity>.In This ManyToOne Case,Without @JoinColumn Annotation ColumnName Will Be Department_Id.We Have Treated This Relation As UniDirectional.If We Add @OneToMany(mappedBy = "departmentVersion01")private Collection<EmployeeVersion01> employeeVersion01s; In DepartmentVersion01(Shown In DepartmentVersion02,EmployeeVersion02).Then It Will Be BiDirectional.If We Omit mappedBy = "departmentVersion01" In @OneToMany(mappedBy = "departmentVersion01") Then This Will Be Two Separate UniDirectional Relation(Shown In DepartmentVersion03,EmployeeVersion03).
+
+11.For OneToOne Relation
