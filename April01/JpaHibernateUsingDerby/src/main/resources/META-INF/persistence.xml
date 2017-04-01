@@ -8,10 +8,11 @@
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<class>edu.gandhi.prajit.april.step01.entity.Book</class>
 		<properties>
+			<property name="javax.persistence.database-product-name" value="Derby"/>
 			<property name="javax.persistence.schema-generation.database.action"
-				value="drop-and-create" />
+				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
-				value="drop-and-create" />
+				value="drop-and-create" /><!-- Script Created For What -->
 			<property name="javax.persistence.schema-generation.scripts.create-target"
 				value="JpaTryOut01Create.ddl" />
 			<property name="javax.persistence.schema-generation.scripts.drop-target"
@@ -24,5 +25,5 @@
 			<property name="javax.persistence.jdbc.password" value="derbyuser" />
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
-	</persistence-unit>
+	</persistence-unit>	
 </persistence>

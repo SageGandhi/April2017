@@ -50,7 +50,8 @@
 				</executions>
 				<configuration>
 					<commandlineArgs>-Duser.language=en -Duser.country=EN</commandlineArgs>
-					<mainClass>edu.gandhi.prajit.april.step01.TestFirstJpaBookApplication</mainClass>
+					<mainClass>edu.gandhi.prajit.april.step02.CrudOperationMainApp</mainClass>
+					<!-- edu.gandhi.prajit.april.step01.TestFirstJpaBookApplication -->
 				</configuration>
 			</plugin>
 			<plugin>

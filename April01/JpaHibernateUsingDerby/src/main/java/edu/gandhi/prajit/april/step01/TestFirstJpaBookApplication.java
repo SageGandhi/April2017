@@ -6,8 +6,8 @@ import javax.persistence.Persistence;
 import edu.gandhi.prajit.april.step01.entity.Book;
 
 public class TestFirstJpaBookApplication {
-	private static final String Description="Are you looking for a deeper understanding of the Java™.";
-	private static final String Title="Effective Java (2nd Edition) 2nd Edition";
+	public static final String Description="Are you looking for a deeper understanding of the Java™.";
+	public static final String Title="Effective Java (2nd Edition) 2nd Edition";
 	public static void main(String[] args) {
 		final EntityManager entityManager = Persistence
 			.createEntityManagerFactory("JpaTryOut01")
