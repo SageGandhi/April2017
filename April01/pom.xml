@@ -13,6 +13,11 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.version>3.6.1</maven.compiler.version>
+		<version.derby>10.13.1.1</version.derby>
+		<version.eclipselink>2.5.1</version.eclipselink>
+		<version.hibernate>4.3.1.Final</version.hibernate>
+		<version.validation.api>1.1.0.Final</version.validation.api>
+		<version.maven.jar.plugin>2.4</version.maven.jar.plugin>
 	</properties>
 	<build>
 		<pluginManagement>
@@ -25,6 +30,11 @@
 						<source>${maven.compiler.source}</source>
 						<target>${maven.compiler.target}</target>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${version.maven.jar.plugin}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

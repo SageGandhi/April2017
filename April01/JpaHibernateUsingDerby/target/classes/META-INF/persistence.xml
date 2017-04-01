@@ -3,7 +3,26 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="JpaTryOut01">
-		
+	<persistence-unit name="JpaTryOut01" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
+		<class>edu.gandhi.prajit.april.step01.entity.Book</class>
+		<properties>
+			<property name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" />
+			<property name="javax.persistence.schema-generation.scripts.action"
+				value="drop-and-create" />
+			<property name="javax.persistence.schema-generation.scripts.create-target"
+				value="JpaTryOut01Create.ddl" />
+			<property name="javax.persistence.schema-generation.scripts.drop-target"
+				value="JpaTryOut01Drop.ddl" />
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:derby://localhost:1527/JpaTryOut01Db;create=true" /><!-- 
+				Start Derby By startNetworkServer Script -->
+			<property name="javax.persistence.jdbc.user" value="derbyuser" />
+			<property name="javax.persistence.jdbc.password" value="derbyuser" />
+			<property name="eclipselink.logging.level" value="INFO" />
+		</properties>
 	</persistence-unit>
 </persistence>
