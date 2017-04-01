@@ -1,8 +1,9 @@
-package edu.gandhi.prajit.april.step03.entity.mto;
+package edu.gandhi.prajit.april.step03.entity.otm;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -11,6 +12,7 @@ public class EmployeeVersion01 {
 	@GeneratedValue
 	private Long id;
 	@ManyToOne
+	@JoinColumn(name="DeptIdVersion01")
 	private DepartmentVersion01 departmentVersion01;
 
 	/**

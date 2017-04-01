@@ -4,10 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-/**
- * CREATE TABLE EMPLOYEEVERSION01 (ID BIGINT NOT NULL, DEPARTMENTVERSION01_ID BIGINT, PRIMARY KEY (ID))
- * ALTER TABLE EMPLOYEEVERSION01 ADD CONSTRAINT MPLYDPRTMNTVRSN01D FOREIGN KEY (DEPARTMENTVERSION01_ID) REFERENCES DEPARTMENTVERSION01 (ID)
- */
+
 @Entity
 public class EmployeeVersion03 {
 	@Id
@@ -39,7 +36,8 @@ public class EmployeeVersion03 {
 	}
 
 	/**
-	 * @param departmentVersion03 the departmentVersion03 to set
+	 * @param departmentVersion03
+	 *            the departmentVersion03 to set
 	 */
 	public final void setDepartmentVersion03(DepartmentVersion03 departmentVersion03) {
 		this.departmentVersion03 = departmentVersion03;

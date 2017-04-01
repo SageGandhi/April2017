@@ -7,9 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-/**
- * CREATE TABLE DEPARTMENTVERSION01 (ID BIGINT NOT NULL, PRIMARY KEY (ID))
- */
 @Entity
 public class DepartmentVersion02 {
 	@Id

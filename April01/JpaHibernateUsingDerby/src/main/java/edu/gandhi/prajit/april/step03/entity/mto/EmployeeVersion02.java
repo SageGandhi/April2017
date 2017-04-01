@@ -5,10 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-/**
- * CREATE TABLE EMPLOYEEVERSION01 (ID BIGINT NOT NULL, DEPARTMENTVERSION01_ID BIGINT, PRIMARY KEY (ID))
- * ALTER TABLE EMPLOYEEVERSION01 ADD CONSTRAINT MPLYDPRTMNTVRSN01D FOREIGN KEY (DEPARTMENTVERSION01_ID) REFERENCES DEPARTMENTVERSION01 (ID)
- */
+
 @Entity
 public class EmployeeVersion02 {
 	@Id

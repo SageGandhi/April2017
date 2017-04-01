@@ -1,17 +1,18 @@
-package edu.gandhi.prajit.april.step03.entity.mto;
+package edu.gandhi.prajit.april.step03.entity.otm;
 
 import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class DepartmentVersion01 {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+	@OneToMany(mappedBy="departmentVersion01")
 	private Collection<EmployeeVersion01> employeeVersion01s;
 
 	/**
