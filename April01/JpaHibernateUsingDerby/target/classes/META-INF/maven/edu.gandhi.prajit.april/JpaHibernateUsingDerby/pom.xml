@@ -15,12 +15,19 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.maven.exec.plugin>1.2.1</version.maven.exec.plugin>
 		<version.maven.assembly.plugin>2.4</version.maven.assembly.plugin>
+		<version.junit>4.11</version.junit>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.derby</groupId>
 			<artifactId>derbyclient</artifactId>
 			<version>${version.derby}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${version.junit}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<build>

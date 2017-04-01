@@ -2,8 +2,10 @@ package edu.gandhi.prajit.april.step01.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="BookDetails",schema="APP")
 public class Book {
 	@Id private Long id;
 	private String title;

@@ -1,13 +1,27 @@
 package edu.gandhi.prajit.april.step02;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
 
 import edu.gandhi.prajit.april.step01.entity.Book;
 
 
 public class BookCrudOperation implements BookService {
-	private final static EntityManager EntityManager=Persistence.createEntityManagerFactory("JpaTryOut01").createEntityManager();
+	private final EntityManager EntityManager;
+
+	/**
+	 * @param entityManager
+	 */
+	public BookCrudOperation(EntityManager entityManager) {
+		this.EntityManager = entityManager;
+	}
+
+	/**
+	 * @return the entityManager
+	 */
+	public final EntityManager getEntityManager() {
+		return EntityManager;
+	}
+	
 	/**
 	 * 
 	 * @param id

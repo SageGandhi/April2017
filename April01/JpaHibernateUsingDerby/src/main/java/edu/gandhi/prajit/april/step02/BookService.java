@@ -63,9 +63,5 @@ public interface BookService {
 	 * @param increaseCost
 	 * @return
 	 */
-	Book updateBookCost(Book book, Float increaseCost);
-	/**
-	 * Closing EntityManager
-	 */
-	void shutDownService();
+	Book updateBookCost(Book book, Float increaseCost);	
 }

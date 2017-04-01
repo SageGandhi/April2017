@@ -6,7 +6,9 @@
 	<persistence-unit name="JpaTryOut01" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
+		<mapping-file>META-INF/CdMapping.xml</mapping-file>
 		<class>edu.gandhi.prajit.april.step01.entity.Book</class>
+		<class>edu.gandhi.prajit.april.step02.entity.Author</class>		
 		<properties>
 			<property name="javax.persistence.database-product-name" value="Derby"/>
 			<property name="javax.persistence.schema-generation.database.action"
@@ -21,8 +23,33 @@
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:derby://localhost:1527/JpaTryOut01Db;create=true" /><!-- 
 				Start Derby By startNetworkServer Script -->
-			<property name="javax.persistence.jdbc.user" value="derbyuser" />
-			<property name="javax.persistence.jdbc.password" value="derbyuser" />
+			<property name="javax.persistence.jdbc.user" value="app" />
+			<property name="javax.persistence.jdbc.password" value="app" />
+			<property name="eclipselink.logging.level" value="INFO" />
+		</properties>
+	</persistence-unit>	
+	<persistence-unit name="JpaTryOut02ForMappingXml" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
+		<class>edu.gandhi.prajit.april.step01.entity.Book</class>
+		<class>edu.gandhi.prajit.april.step02.entity.Author</class>
+		<class>edu.gandhi.prajit.april.step02.entity.CompactDisc</class>		
+		<properties>
+			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" /><!-- Action Taken On Database -->
+			<property name="javax.persistence.schema-generation.scripts.action"
+				value="drop-and-create" /><!-- Script Created For What -->
+			<property name="javax.persistence.schema-generation.scripts.create-target"
+				value="JpaTryOut01Create.ddl" />
+			<property name="javax.persistence.schema-generation.scripts.drop-target"
+				value="JpaTryOut01Drop.ddl" />
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:derby://localhost:1527/JpaTryOut01Db;create=true" /><!-- 
+				Start Derby By startNetworkServer Script -->
+			<property name="javax.persistence.jdbc.user" value="app" />
+			<property name="javax.persistence.jdbc.password" value="app" />
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
 	</persistence-unit>	
