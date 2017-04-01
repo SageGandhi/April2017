@@ -14,6 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.maven.exec.plugin>1.2.1</version.maven.exec.plugin>
+		<version.maven.assembly.plugin>2.4</version.maven.assembly.plugin>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -50,6 +51,18 @@
 				<configuration>
 					<commandlineArgs>-Duser.language=en -Duser.country=EN</commandlineArgs>
 					<mainClass>edu.gandhi.prajit.april.step01.TestFirstJpaBookApplication</mainClass>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>${version.maven.assembly.plugin}</version>
+				<configuration>
+					<finalName>AprilJpa</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptors>
+						<descriptor>assembly.xml</descriptor>
+					</descriptors>
 				</configuration>
 			</plugin>
 		</plugins>
