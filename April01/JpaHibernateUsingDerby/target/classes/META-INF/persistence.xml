@@ -260,7 +260,9 @@
 	</persistence-unit>
 	<persistence-unit name="JpaTryOut01Jpql01">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
+		<mapping-file>META-INF/PersistenceUnitMetadata.xml</mapping-file>
+		<class>edu.gandhi.prajit.april.step05.callback.Author</class>
+		<class>edu.gandhi.prajit.april.step05.callback.Employee</class>						
 		<properties>
 			<property name="javax.persistence.database-product-name"
 				value="Derby" />
@@ -269,11 +271,11 @@
 			<property name="javax.persistence.schema-generation.scripts.action"
 				value="drop-and-create" /><!-- Script Created For What -->
 			<property name="javax.persistence.schema-generation.scripts.create-target"
-				value="JpaTryOut01Relationship01Create.ddl" />
+				value="JpaTryOut01Jpql01Create.ddl" />
 			<property name="javax.persistence.schema-generation.scripts.drop-target"
-				value="JpaTryOut01Relationship01Drop.ddl" />
-			<property name="javax.persistence.sql-load-script-source"
-				value="InsertForJpql01.sql" />
+				value="JpaTryOut01Jpql01Drop.ddl" />
+			<!-- <property name="javax.persistence.sql-load-script-source"
+				value="InsertForJpql01.sql" /> -->
 			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:derby://localhost:1527/JpaTryOut01Db;create=true" /><!-- 
@@ -282,6 +284,5 @@
 			<property name="javax.persistence.jdbc.password" value="app" />
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
-
 	</persistence-unit>
 </persistence>

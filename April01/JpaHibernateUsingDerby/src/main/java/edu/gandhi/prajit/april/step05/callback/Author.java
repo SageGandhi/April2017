@@ -1,25 +1,39 @@
-package edu.gandhi.prajit.april.step02.entity;
+package edu.gandhi.prajit.april.step05.callback;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.ExcludeDefaultListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.PostLoad;
+import javax.persistence.PostPersist;
+import javax.persistence.PostRemove;
+import javax.persistence.PostUpdate;
+import javax.persistence.PrePersist;
+import javax.persistence.PreRemove;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
-@Entity// Default Name Is Author
+@Entity // Default Name Is Author
 @Table(name = "AuthorDetails", schema = "APP")
-@NamedQueries({@NamedQuery(name="Author.SortByAuthorName.Positional",query="select author from Author author where author.dateOfBirth >?1 order by author.firstName asc,author.lastName desc"),
-	@NamedQuery(name="Author.SortByAuthorName.Named",query="select author from Author author where author.dateOfBirth >:Age order by author.firstName asc,author.lastName desc")})
+@NamedQueries({
+		@NamedQuery(name = "Author.SortByAuthorName.Positional", query = "select author from Author author where author.dateOfBirth >?1 order by author.firstName asc,author.lastName desc"),
+		@NamedQuery(name = "Author.SortByAuthorName.Named", query = "select author from Author author where author.dateOfBirth >:Age order by author.firstName asc,author.lastName desc")})
+@EntityListeners({ AgeCalculationListener.class, ValidationListener.class })
+@ExcludeDefaultListeners
 public class Author {
 	public enum Language {
 		English, French, Spanish, Portuguese, Russian, Chinese, Indian, German, Japanese
@@ -173,5 +187,44 @@ public class Author {
 	 */
 	public final void setLanguage(Language language) {
 		this.language = language;
+	}
+
+	/**
+	 * Business Logic That Required For Specific Entity.To Make It General For
+	 * All Entity We Make It A Cross-Cutting Concern Using @EntityListener
+	 */
+	@PrePersist
+	@PreUpdate
+	private void ValidateName() {
+		if (firstName == null || "".equals(firstName))
+			throw new IllegalArgumentException("Invalid First Name");
+		if (lastName == null || "".equals(lastName))
+			throw new IllegalArgumentException("Invalid Last Name");
+	}
+
+	@PostLoad
+	@PostPersist
+	@PostUpdate
+	private void SetAgeFromBirthDay() {
+		if (dateOfBirth == null) {
+			age = null;
+			return;
+		}
+		Calendar birth = new GregorianCalendar();
+		birth.setTime(dateOfBirth);
+		Calendar now = new GregorianCalendar();
+		now.setTime(new Date());
+		age = now.get(Calendar.YEAR) - birth.get(Calendar.YEAR)
+				+ ((now.get(Calendar.DAY_OF_YEAR) - birth.get(Calendar.DAY_OF_YEAR) < 0) ? -1 : 0);
+	}
+
+	@PreRemove
+	private void preRemoveMethod() {
+		System.out.println("Thinking... What To Do?");
+	}
+
+	@PostRemove
+	private void postRemoveMethod() {
+		System.out.println("My New Home..Jvm HeapSpce.");
 	}
 }
