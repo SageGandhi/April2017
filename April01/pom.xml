@@ -8,6 +8,7 @@
 	<name>WorkSpaceFor April First</name>
 	<modules>
 		<module>JpaHibernateUsingDerby</module>
+		<module>QuestionAnswerTutorial</module>
 	</modules>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
