@@ -8,9 +8,10 @@
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<mapping-file>META-INF/CdMapping.xml</mapping-file>
 		<class>edu.gandhi.prajit.april.step01.entity.Book</class>
-		<class>edu.gandhi.prajit.april.step02.entity.Author</class>		
+		<class>edu.gandhi.prajit.april.step02.entity.Author</class>
 		<properties>
-			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
@@ -27,15 +28,17 @@
 			<property name="javax.persistence.jdbc.password" value="app" />
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
-	</persistence-unit>	
-	<persistence-unit name="JpaTryOut02ForMappingXml" transaction-type="RESOURCE_LOCAL">
+	</persistence-unit>
+	<persistence-unit name="JpaTryOut02ForMappingXml"
+		transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<class>edu.gandhi.prajit.april.step01.entity.Book</class>
 		<class>edu.gandhi.prajit.april.step02.entity.Author</class>
-		<class>edu.gandhi.prajit.april.step02.entity.CompactDisc</class>		
+		<class>edu.gandhi.prajit.april.step02.entity.CompactDisc</class>
 		<properties>
-			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
@@ -53,7 +56,8 @@
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
 	</persistence-unit>
-	<persistence-unit name="JpaTryOut01RelationshipMto" transaction-type="RESOURCE_LOCAL"><!-- Mto:ManyToOne -->
+	<persistence-unit name="JpaTryOut01RelationshipMto"
+		transaction-type="RESOURCE_LOCAL"><!-- Mto:ManyToOne -->
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<class>edu.gandhi.prajit.april.step03.entity.mto.DepartmentVersion01</class>
@@ -63,7 +67,8 @@
 		<class>edu.gandhi.prajit.april.step03.entity.mto.EmployeeVersion02</class>
 		<class>edu.gandhi.prajit.april.step03.entity.mto.EmployeeVersion03</class>
 		<properties>
-			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
@@ -81,13 +86,15 @@
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
 	</persistence-unit>
-	<persistence-unit name="JpaTryOut01RelationshipOto" transaction-type="RESOURCE_LOCAL"><!-- Oto:OneToOne -->
+	<persistence-unit name="JpaTryOut01RelationshipOto"
+		transaction-type="RESOURCE_LOCAL"><!-- Oto:OneToOne -->
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<class>edu.gandhi.prajit.april.step03.entity.oto.EmployeeVersion01</class>
 		<class>edu.gandhi.prajit.april.step03.entity.oto.ParkingSpaceVersion01</class>
 		<properties>
-			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
@@ -105,13 +112,15 @@
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
 	</persistence-unit>
-	<persistence-unit name="JpaTryOut01RelationshipOtm" transaction-type="RESOURCE_LOCAL"><!-- Otm:OneToMany -->
+	<persistence-unit name="JpaTryOut01RelationshipOtm"
+		transaction-type="RESOURCE_LOCAL"><!-- Otm:OneToMany -->
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<class>edu.gandhi.prajit.april.step03.entity.otm.EmployeeVersion01</class>
 		<class>edu.gandhi.prajit.april.step03.entity.otm.DepartmentVersion01</class>
 		<properties>
-			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
@@ -129,7 +138,8 @@
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
 	</persistence-unit>
-	<persistence-unit name="JpaTryOut01RelationshipMtm" transaction-type="RESOURCE_LOCAL"><!-- Mtm:ManyToMany -->
+	<persistence-unit name="JpaTryOut01RelationshipMtm"
+		transaction-type="RESOURCE_LOCAL"><!-- Mtm:ManyToMany -->
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<class>edu.gandhi.prajit.april.step03.entity.mtm.ProjectVersion01</class>
@@ -137,7 +147,8 @@
 		<class>edu.gandhi.prajit.april.step03.entity.mtm.EmployeeVersion01</class>
 		<class>edu.gandhi.prajit.april.step03.entity.mtm.EmployeeVersion02</class>
 		<properties>
-			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
@@ -155,7 +166,8 @@
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
 	</persistence-unit>
-	<persistence-unit name="JpaTryOut01RelationshipUniotm" transaction-type="RESOURCE_LOCAL"><!-- Uniotm:UniDirectionalOneToMany/ManyToMany -->
+	<persistence-unit name="JpaTryOut01RelationshipUniotm"
+		transaction-type="RESOURCE_LOCAL"><!-- Uniotm:UniDirectionalOneToMany/ManyToMany -->
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<class>edu.gandhi.prajit.april.step03.entity.uniotm.EmployeeVersion01</class>
@@ -165,7 +177,8 @@
 		<class>edu.gandhi.prajit.april.step03.entity.uniotm.ProjectVersion02</class>
 		<class>edu.gandhi.prajit.april.step03.entity.uniotm.PhoneVersion02</class>
 		<properties>
-			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
@@ -183,7 +196,8 @@
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
 	</persistence-unit>
-	<persistence-unit name="JpaTryOut01RelationshipElementCollection01" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="JpaTryOut01RelationshipElementCollection01"
+		transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<class>edu.gandhi.prajit.april.step03.elementcollection.EmployeeVersion01</class>
@@ -191,7 +205,8 @@
 		<class>edu.gandhi.prajit.april.step03.elementcollection.DepartmentVersion01</class>
 		<class>edu.gandhi.prajit.april.step03.elementcollection.DepartmentVersion02</class>
 		<properties>
-			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
@@ -209,7 +224,8 @@
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
 	</persistence-unit>
-	<persistence-unit name="JpaTryOut01Relationship01" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="JpaTryOut01Relationship01"
+		transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
 		<class>edu.gandhi.prajit.april.step04.entity.Book</class>
@@ -223,7 +239,8 @@
 		<class>edu.gandhi.prajit.april.step04.entity.Musician00</class>
 		<class>edu.gandhi.prajit.april.step04.entity.Musician02</class>
 		<properties>
-			<property name="javax.persistence.database-product-name" value="Derby"/>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" /><!-- Action Taken On Database -->
 			<property name="javax.persistence.schema-generation.scripts.action"
@@ -240,5 +257,31 @@
 			<property name="javax.persistence.jdbc.password" value="app" />
 			<property name="eclipselink.logging.level" value="INFO" />
 		</properties>
+	</persistence-unit>
+	<persistence-unit name="JpaTryOut01Jpql01">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<!-- org.hibernate.jpa.HibernatePersistenceProvider -->
+		<properties>
+			<property name="javax.persistence.database-product-name"
+				value="Derby" />
+			<property name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" /><!-- Action Taken On Database -->
+			<property name="javax.persistence.schema-generation.scripts.action"
+				value="drop-and-create" /><!-- Script Created For What -->
+			<property name="javax.persistence.schema-generation.scripts.create-target"
+				value="JpaTryOut01Relationship01Create.ddl" />
+			<property name="javax.persistence.schema-generation.scripts.drop-target"
+				value="JpaTryOut01Relationship01Drop.ddl" />
+			<property name="javax.persistence.sql-load-script-source"
+				value="InsertForJpql01.sql" />
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:derby://localhost:1527/JpaTryOut01Db;create=true" /><!-- 
+				Start Derby By startNetworkServer Script -->
+			<property name="javax.persistence.jdbc.user" value="app" />
+			<property name="javax.persistence.jdbc.password" value="app" />
+			<property name="eclipselink.logging.level" value="INFO" />
+		</properties>
+
 	</persistence-unit>
 </persistence>
