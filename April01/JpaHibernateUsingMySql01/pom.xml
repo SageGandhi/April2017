@@ -69,7 +69,9 @@
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.TemporalTypeMainClass00</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.FormulaCalculationMainClass00</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.EmbeddableMainClass00</mainClass> -->
-					<mainClass>edu.gandhi.prajit.april.appmain.BasicCollectionMainClass00</mainClass>
+					<!-- <mainClass>edu.gandhi.prajit.april.appmain.BasicCollectionMainClass00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.appmain.BasicMapTypeMainClass00</mainClass> -->
+					<mainClass>edu.gandhi.prajit.april.appmain.CompositeListMainClass00</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>
