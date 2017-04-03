@@ -18,7 +18,7 @@ public class TimeTestVersion02 {
 	@GeneratedValue
 	@Column(name = "TIME_TEST_ID")
 	private Long timeTestId;
-
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "DATETIME_COLUMN")
 	private Date datetimeColumn;

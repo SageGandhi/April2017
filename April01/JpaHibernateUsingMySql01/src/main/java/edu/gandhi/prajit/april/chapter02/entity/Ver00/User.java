@@ -1,34 +1,24 @@
-package edu.gandhi.prajit.april.chapter01.entity.Ver00;
+package edu.gandhi.prajit.april.chapter02.entity.Ver00;
 
 import java.util.Date;
 
-import javax.persistence.Access;
-import javax.persistence.AccessType;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import org.hibernate.annotations.Formula;
 
 @Entity
 @Table(name = "FINANCES_USER")
-@Access(AccessType.FIELD)
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	/*
-	 * @GeneratedValue(strategy = GenerationType.SEQUENCE,generator=
-	 * "MapToGenValAnnotation") @SequenceGenerator(name="MapToGenValAnnotation",
-	 * sequenceName="User_SequenceInDb") @GeneratedValue(strategy=GenerationType
-	 * .TABLE,generator="MapToGenValAnnotation") @TableGenerator(name=
-	 * "MapToGenValAnnotation",table="Schema_TableForPk",pkColumnName="PkColumn"
-	 * ,valueColumnName="ValueColumn",pkColumnValue="UserPk")
-	 */
+	@GeneratedValue
 	@Column(name = "USER_ID")
 	private Long userId;
 
@@ -38,11 +28,16 @@ public class User {
 	@Column(name = "LAST_NAME")
 	private String lastName;
 
-	@Column(name = "BIRTH_DATE", nullable = false)
+	@Column(name = "BIRTH_DATE")
 	private Date birthDate;
 
 	@Column(name = "EMAIL_ADDRESS")
 	private String emailAddress;
+
+	@Embedded
+	@AttributeOverrides({@AttributeOverride(name="addressLine1", column=@Column(name="USER_ADDRESS_LINE_1")),
+		@AttributeOverride(name="addressLine2", column=@Column(name="USER_ADDRESS_LINE_2"))})
+	private Address address;
 
 	@Column(name = "LAST_UPDATED_DATE")
 	private Date lastUpdatedDate;
@@ -56,41 +51,8 @@ public class User {
 	@Column(name = "CREATED_BY", updatable = false)
 	private String createdBy;
 
-	@Transient
-	private boolean checkValid;
-
-	@Formula("lower(datediff(curdate(),birth_date)/365)")
+	@Formula("lower(datediff(curdate(), birth_date)/365)")
 	private int age;
-
-	/**
-	 * @return the age
-	 */
-	public final int getAge() {
-		return age;
-	}
-
-	/**
-	 * @param age
-	 *            the age to set
-	 */
-	public final void setAge(int age) {
-		this.age = age;
-	}
-
-	/**
-	 * @return the checkValid
-	 */
-	public final boolean isCheckValid() {
-		return checkValid;
-	}
-
-	/**
-	 * @param checkValid
-	 *            the checkValid to set
-	 */
-	public final void setCheckValid(boolean checkValid) {
-		this.checkValid = checkValid;
-	}
 
 	/**
 	 * @return the userId
@@ -100,8 +62,7 @@ public class User {
 	}
 
 	/**
-	 * @param userId
-	 *            the userId to set
+	 * @param userId the userId to set
 	 */
 	public final void setUserId(Long userId) {
 		this.userId = userId;
@@ -115,8 +76,7 @@ public class User {
 	}
 
 	/**
-	 * @param firstName
-	 *            the firstName to set
+	 * @param firstName the firstName to set
 	 */
 	public final void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -130,8 +90,7 @@ public class User {
 	}
 
 	/**
-	 * @param lastName
-	 *            the lastName to set
+	 * @param lastName the lastName to set
 	 */
 	public final void setLastName(String lastName) {
 		this.lastName = lastName;
@@ -145,8 +104,7 @@ public class User {
 	}
 
 	/**
-	 * @param birthDate
-	 *            the birthDate to set
+	 * @param birthDate the birthDate to set
 	 */
 	public final void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
@@ -160,11 +118,24 @@ public class User {
 	}
 
 	/**
-	 * @param emailAddress
-	 *            the emailAddress to set
+	 * @param emailAddress the emailAddress to set
 	 */
 	public final void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
+	}
+
+	/**
+	 * @return the address
+	 */
+	public final Address getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address the address to set
+	 */
+	public final void setAddress(Address address) {
+		this.address = address;
 	}
 
 	/**
@@ -175,8 +146,7 @@ public class User {
 	}
 
 	/**
-	 * @param lastUpdatedDate
-	 *            the lastUpdatedDate to set
+	 * @param lastUpdatedDate the lastUpdatedDate to set
 	 */
 	public final void setLastUpdatedDate(Date lastUpdatedDate) {
 		this.lastUpdatedDate = lastUpdatedDate;
@@ -190,8 +160,7 @@ public class User {
 	}
 
 	/**
-	 * @param lastUpdatedBy
-	 *            the lastUpdatedBy to set
+	 * @param lastUpdatedBy the lastUpdatedBy to set
 	 */
 	public final void setLastUpdatedBy(String lastUpdatedBy) {
 		this.lastUpdatedBy = lastUpdatedBy;
@@ -205,8 +174,7 @@ public class User {
 	}
 
 	/**
-	 * @param createdDate
-	 *            the createdDate to set
+	 * @param createdDate the createdDate to set
 	 */
 	public final void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
@@ -220,10 +188,23 @@ public class User {
 	}
 
 	/**
-	 * @param createdBy
-	 *            the createdBy to set
+	 * @param createdBy the createdBy to set
 	 */
 	public final void setCreatedBy(String createdBy) {
 		this.createdBy = createdBy;
+	}
+
+	/**
+	 * @return the age
+	 */
+	public final int getAge() {
+		return age;
+	}
+
+	/**
+	 * @param age the age to set
+	 */
+	public final void setAge(int age) {
+		this.age = age;
 	}
 }

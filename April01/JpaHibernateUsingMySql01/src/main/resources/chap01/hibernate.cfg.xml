@@ -13,7 +13,9 @@
 		<!-- Echo Executed Sql To Standard Output Stream -->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
-		<mapping class="edu.gandhi.prajit.april.chapter03.entity.Ver00.Bank" />
-		<mapping class="edu.gandhi.prajit.april.chapter03.entity.Ver00.User" />				
+		<mapping class="edu.gandhi.prajit.april.chapter01.entity.Ver00.AccountType" />
+		<mapping class="edu.gandhi.prajit.april.chapter01.entity.Ver00.User" />
+		<mapping class="edu.gandhi.prajit.april.chapter01.entity.Ver00.TimeTestVersion01" />
+		<mapping class="edu.gandhi.prajit.april.chapter01.entity.Ver00.TimeTestVersion02" />		
 	</session-factory>
 </hibernate-configuration>

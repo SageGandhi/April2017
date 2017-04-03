@@ -9,7 +9,6 @@ import edu.gandhi.prajit.april.chapter01.entity.Ver00.TimeTestVersion01;
 import edu.gandhi.prajit.april.chapter01.entity.Ver00.TimeTestVersion02;
 import edu.gandhi.prajit.april.chapter01.util.HibernateUtilForXml;
 
-/** Learn About NamingStrategy */
 public class TemporalTypeMainClass00 {
 	public static void main(String[] args) {
 		/** We Have Configured hibernate.cfg.xml File In ClassPath. */
@@ -31,6 +30,7 @@ public class TemporalTypeMainClass00 {
 		 * sqlTimeColumn=21:38:34]
 		 */
 		session.getTransaction().begin();
+		/**Only Applied For java.util.Date As java.sql.Date Extends It*/
 		final TimeTestVersion02 timeTest02 = new TimeTestVersion02(nowDate);
 		session.save(timeTest02);
 		session.getTransaction().commit();
@@ -45,7 +45,6 @@ public class TemporalTypeMainClass00 {
 		 * sqlTimestampColumn=2017-04-03 21:38:35.0, sqlDateColumn=2017-04-03,
 		 * sqlTimeColumn=21:38:34]
 		 */
-
 		session.close();
 		HibernateUtilForXml.getSessionFactory().close();
 	}
