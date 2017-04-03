@@ -1,0 +1,6 @@
+Proven Persistence Architecture(Once You Know Hibernate,Any Project That Uses Hibernate Becomes Understandable).Simplified Data Persistence With Less Code Means Maintainance Cost Decreased.Abstracts Underlying Database.(Mysql Credential:root/password,infinite/skills).Learn About Hibernate NamingStrategy.
+@Access(AccessType.FIELD) Is Normally Used By Default,@Access(AccessType.PROPERTY) Is Used In Getters If Getters/Setters Have Some Business Logic/Validation Incorporated In Those Methods/Public Api.
+Usage:@GeneratedValue(strategy = GenerationType.SEQUENCE,generator="MapToGenValAnnotation")@SequenceGenerator(name="MapToGenValAnnotation",sequenceName="User_SequenceInDb")
+Usage:@GeneratedValue(strategy=GenerationType.TABLE,generator="MapToGenValAnnotation")@TableGenerator(name="MapToGenValAnnotation",table="Schema_TableForPk",pkColumnName="PkColumn",valueColumnName="ValueColumn",pkColumnValue="UserPk")
+Question:Which Generation Type To Choose?Discuss Trade-Off Between Them.Use @Transient To Ignore Any Field/Property(Attribute) While Saving/Updating/Loading.
+Usage:Back Up This File,Only Rename When Using edu.gandhi.prajit.april.chapter01.util.HibernateUtilForProperties Class To Get SessionFactory
