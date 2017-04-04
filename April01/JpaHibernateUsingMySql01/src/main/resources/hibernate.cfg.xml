@@ -13,12 +13,12 @@
 		<!-- Echo Executed Sql To Standard Output Stream -->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.User" />
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Account" />
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Bank"/>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Budget"/>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Credential"/>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Transaction"/>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.User"/>
+		<mapping class="edu.gandhi.prajit.april.chapter10.entity.mtmbi.Account" />
+		<mapping class="edu.gandhi.prajit.april.chapter10.entity.mtmbi.Address" />
+		<mapping class="edu.gandhi.prajit.april.chapter10.entity.mtmbi.Bank"/>
+		<mapping class="edu.gandhi.prajit.april.chapter10.entity.mtmbi.Budget"/>
+		<mapping class="edu.gandhi.prajit.april.chapter10.entity.mtmbi.Credential"/>
+		<mapping class="edu.gandhi.prajit.april.chapter10.entity.mtmbi.Transaction"/>
+		<mapping class="edu.gandhi.prajit.april.chapter10.entity.mtmbi.User"/>
 	</session-factory>
 </hibernate-configuration>

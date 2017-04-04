@@ -78,7 +78,8 @@
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyAccountTransactionUni00</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyAccountTransactionBi00</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyOptionalBudgetTransactionBi00</mainClass> -->
-					<mainClass>edu.gandhi.prajit.april.appmain.ManyToManyUserAccountUni00</mainClass>
+					<!-- <mainClass>edu.gandhi.prajit.april.appmain.ManyToManyUserAccountUni00</mainClass> -->
+					<mainClass>edu.gandhi.prajit.april.appmain.ManyToManyUserAccountBi00</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>
