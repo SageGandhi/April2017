@@ -13,12 +13,8 @@
 		<!-- Echo Executed Sql To Standard Output Stream -->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.User" />
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Account" />
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Bank"/>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Budget"/>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Credential"/>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.Transaction"/>
-		<mapping class="edu.gandhi.prajit.april.chapter09.entity.mtmuni.User"/>
+		<mapping class="edu.gandhi.prajit.april.chapter08.entity.optionalotm.Account" />
+		<mapping class="edu.gandhi.prajit.april.chapter08.entity.optionalotm.Budget" />
+		<mapping class="edu.gandhi.prajit.april.chapter08.entity.optionalotm.Transaction"/>
 	</session-factory>
 </hibernate-configuration>

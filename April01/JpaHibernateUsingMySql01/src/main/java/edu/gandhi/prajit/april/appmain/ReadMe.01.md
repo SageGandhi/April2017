@@ -6,3 +6,8 @@ Question:Which Generation Type To Choose?Discuss Trade-Off Between Them.Use @Tra
 Usage:Back Up This File,Only Rename When Using edu.gandhi.prajit.april.chapter01.util.HibernateUtilForProperties Class To Get SessionFactory. Calculated Column Used For Derived Attribute.In Hibernate We Use @Formula Annotation.This Calculation Will Be Inserted Into The Select Clause But Not For Insert/Update.If Dependent Columns Are Updated Calculated Attribute Value Will Not Be Changed Unless We Perform Refresh(Select).See edu.gandhi.prajit.april.appmain.FormulaCalculationMainClass00.Part Of Underlying Database Expression,Not Portable Across Database Sometimes.Not Portable Across Different Orm As @Formula Is Not Part Of Jpa Specification.Entity Types Has Identity/LifeCycle,Value Type(Ex.String) Does Not.Value Type Can Be Basic,Composite(Weak Entity Ex.Address,In Jpa Term Embeddable),Collection(May Contain ValueTypes Or EntityTypes.Annotation Will Be Different But Collection Means VlaueType).
 edu.gandhi.prajit.april.chapter02.entity.Ver00 Entities Are Used For @Embeded&@Embeddable. edu.gandhi.prajit.april.chapter03.entity.Ver00
 @MapKeyColumn,@ElementCollection,@CollectionTable For Basic Type Expained In edu.gandhi.prajit.april.appmain.BasicMapTypeMainClass00&BasicCollectionMainClass00.
+
+Decide Direction(Source Entity To Target Entity)
+Decide Cardinality(Source Entity Cardinality To Target Entity Cardinality)
+Decide Owning Entity Using Which Table Hold The Foreign Key
+OneToMany Using JoinTable:See edu.gandhi.prajit.april.appmain.OneToManyOptionalBudgetTransactionBi00 When There Is Optional Mapping In Between Them.JoinColumn Part Of Source Entity,InverseJoinColumn Is Part Of Target Entity. 

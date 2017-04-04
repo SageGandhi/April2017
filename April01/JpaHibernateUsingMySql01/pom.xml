@@ -73,7 +73,12 @@
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.BasicMapTypeMainClass00</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.CompositeListMainClass00</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.ValueCollectionMainClass00</mainClass> -->
-					<mainClass>edu.gandhi.prajit.april.appmain.OneToOneCredentialUserEntityMain00</mainClass>
+					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToOneCredentialUserEntityUni00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToOneCredentialUserEntityBi00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyAccountTransactionUni00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyAccountTransactionBi00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyOptionalBudgetTransactionBi00</mainClass> -->
+					<mainClass>edu.gandhi.prajit.april.appmain.ManyToManyUserAccountUni00</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>
