@@ -39,9 +39,9 @@ public class ManyToManyUserAccountBi00 {
 		
 		session.getTransaction().commit();
 
-		System.out.println(((Account)session.get(Account.class,
-			account00.getAccountId())).getUsers().iterator().
-			next().getEmailAddress());
+		System.out.println(((User)session.get(User.class,
+			user00.getUserId())).getAccounts().iterator().
+			next().getName());
 		
 		session.close();
 		HibernateUtilForXml.getSessionFactory().close();

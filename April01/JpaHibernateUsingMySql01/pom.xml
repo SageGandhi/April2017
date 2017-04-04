@@ -79,7 +79,13 @@
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyAccountTransactionBi00</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyOptionalBudgetTransactionBi00</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.appmain.ManyToManyUserAccountUni00</mainClass> -->
-					<mainClass>edu.gandhi.prajit.april.appmain.ManyToManyUserAccountBi00</mainClass>
+					<!-- <mainClass>edu.gandhi.prajit.april.appmain.ManyToManyUserAccountBi00</mainClass> -->
+					<!-- Different Hibernate Operation Use Same Config Xml At Step 10-->
+					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsRetrieve00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsUpdate01</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDelete02</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDetachedToPersistent03</mainClass> -->
+					<mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDetachedAttached00</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>
