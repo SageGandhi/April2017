@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/ifinances</property>
+		<property name="connection.username">infinite</property>
+		<property name="connection.password">skills</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<mapping class="edu.gandhi.prajit.april.daopattern.entity.Account" />
+		<mapping class="edu.gandhi.prajit.april.daopattern.entity.Address" />
+		<mapping class="edu.gandhi.prajit.april.daopattern.entity.Bank"/>
+		<mapping class="edu.gandhi.prajit.april.daopattern.entity.Budget"/>
+		<mapping class="edu.gandhi.prajit.april.daopattern.entity.Credential"/>
+		<mapping class="edu.gandhi.prajit.april.daopattern.entity.Transaction"/>
+		<mapping class="edu.gandhi.prajit.april.daopattern.entity.User"/>
+	</session-factory>
+</hibernate-configuration>
