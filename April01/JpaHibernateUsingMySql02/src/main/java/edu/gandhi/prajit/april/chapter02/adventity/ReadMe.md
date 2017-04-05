@@ -1,0 +1,1 @@
+Enumeration By Default Ordinal,Can Be Changed Using @Enumerated 
