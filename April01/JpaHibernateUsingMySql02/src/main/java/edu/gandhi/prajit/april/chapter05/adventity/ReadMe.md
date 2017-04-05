@@ -7,3 +7,5 @@ As Table Will Be Same For All SubClasses,Provide @Table(name="NameOfTheSingleTab
 Remove All @Table Annotation From SubClasses As All Are In Single Table.[edu.gandhi.prajit.april.chapter05.adventity.Stock,edu.gandhi.prajit.april.chapter05.adventity.Bond]
 Also We Can Remove @TableGenerator In SuperClass,We Can Use Any @GeneratedValue(GenerationType)
 Also Provide @DiscriminatorValue In Each SubClasses Otherwise Defaulted To Class Name.
+
+If Query Got Complex,We Can Create A View & Make A Entity Out Of It.

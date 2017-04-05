@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database Connection Settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/ifinances</property>
+		<property name="connection.username">infinite</property>
+		<property name="connection.password">skills</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<!-- Echo Executed Sql To Standard Output Stream -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.User"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Bank"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Credential"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Account"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Transaction"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Budget"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Currency"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Market"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Stock"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Bond"/>
+		<mapping class="edu.gandhi.prajit.april.jpqlhql.entity00.Portfolio"/>
+	</session-factory>
+</hibernate-configuration>

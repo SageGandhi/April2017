@@ -4,6 +4,16 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
+		<!-- Create Data Definition Lang. -->
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+		<!-- Validate Entity Model & Underlying Database Table Model Are In Sync -->
+		<!-- <property name="hbm2ddl.auto">validate</property> -->
+		<!-- Validate Entity Model & Underlying Database Table Model Are In Sync,If 
+			Not In Sync Then Create Accrordingly In Database -->
+		<!-- <property name="hbm2ddl.auto">update</property> -->
+		<!-- Create The Table To Execute Application,Once Execution Done Drop All 
+			Table -->
+		<!-- <property name="hbm2ddl.auto">create-drop</property> -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/ifinances</property>
 		<property name="connection.username">infinite</property>
@@ -11,7 +21,7 @@
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
-		<mapping class="edu.gandhi.prajit.april.chapter03.adventity.Bond"/>
-		<mapping class="edu.gandhi.prajit.april.chapter03.adventity.Stock"/>
+		<mapping class="edu.gandhi.prajit.april.chapter03.adventity.Bond" />
+		<mapping class="edu.gandhi.prajit.april.chapter03.adventity.Stock" />
 	</session-factory>
 </hibernate-configuration>
