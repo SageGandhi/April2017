@@ -11,3 +11,4 @@ Decide Direction(Source Entity To Target Entity)
 Decide Cardinality(Source Entity Cardinality To Target Entity Cardinality)
 Decide Owning Entity Using Which Table Hold The Foreign Key
 OneToMany Using JoinTable:See edu.gandhi.prajit.april.appmain.OneToManyOptionalBudgetTransactionBi00 When There Is Optional Mapping In Between Them.JoinColumn Part Of Source Entity,InverseJoinColumn Is Part Of Target Entity. 
+Check org.hibernate.jpa.spi.AbstractEntityManagerImpl For Jpa-Hibernate Binding.

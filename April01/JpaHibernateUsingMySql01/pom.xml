@@ -85,7 +85,10 @@
 					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsUpdate01</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDelete02</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDetachedToPersistent03</mainClass> -->
-					<mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDetachedAttached00</mainClass>
+					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDetachedAttached00</mainClass> -->
+					<!-- Jpa Related HandsOn -->
+					<!-- <mainClass>edu.gandhi.prajit.april.jpa.part00.JpaApplicationConfigurationMain</mainClass> -->
+					<mainClass>edu.gandhi.prajit.april.jpa.part00.JpaApplicationConfigurationMain00</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>
