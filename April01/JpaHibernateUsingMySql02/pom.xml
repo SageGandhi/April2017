@@ -6,7 +6,7 @@
 		<artifactId>April01</artifactId>
 		<version>1.0</version>
 	</parent>
-	<artifactId>JpaHibernateUsingMySql01</artifactId>
+	<artifactId>JpaHibernateUsingMySql02</artifactId>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.maven.exec.plugin>1.2.1</version.maven.exec.plugin>
@@ -64,32 +64,7 @@
 				</executions>
 				<configuration>
 					<commandlineArgs>-Duser.language=en -Duser.country=EN</commandlineArgs>
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.SystemDefaultMainClassV00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.SystemDefaultMainClassV01</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.TemporalTypeMainClass00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.FormulaCalculationMainClass00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.EmbeddableMainClass00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.BasicCollectionMainClass00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.BasicMapTypeMainClass00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.CompositeListMainClass00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.ValueCollectionMainClass00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToOneCredentialUserEntityUni00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToOneCredentialUserEntityBi00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyAccountTransactionUni00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyAccountTransactionBi00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.OneToManyOptionalBudgetTransactionBi00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.ManyToManyUserAccountUni00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.appmain.ManyToManyUserAccountBi00</mainClass> -->
-					<!-- Different Hibernate Operation Use Same Config Xml At Step 10-->
-					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsRetrieve00</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsUpdate01</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDelete02</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDetachedToPersistent03</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.hiberop.HibernateOpsDetachedAttached00</mainClass> -->
-					<!-- Jpa Related HandsOn -->
-					<!-- <mainClass>edu.gandhi.prajit.april.jpa.part00.JpaApplicationConfigurationMain</mainClass> -->
-					<!-- <mainClass>edu.gandhi.prajit.april.jpa.part00.JpaApplicationConfigurationMain00</mainClass> -->
-					<mainClass>edu.gandhi.prajit.april.jpa.part00.JpaApplicationConfigurationMain01</mainClass>
+					<mainClass>edu.gandhi.prajit.april.appmainadv.CompoundPrimaryKeyMainClass00</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>
