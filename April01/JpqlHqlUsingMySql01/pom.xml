@@ -76,7 +76,13 @@
 					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.JpqlApplication04</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.HqlApplication05</mainClass> -->
 					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.JpqlApplication05</mainClass> -->
-					<mainClass>edu.gandhi.prajit.april.main.jpqlhql.HqlApplication06</mainClass>
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.HqlApplication06</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.criteriaquery.HqlApplication00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.criteriaquery.JpqlApplication00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.criteriaquery.HqlApplication01</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.criteriaquery.JpqlApplication01</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.criteriaquery.HqlApplicationPaging01</mainClass> -->
+					<mainClass>edu.gandhi.prajit.april.main.criteriaquery.JpqlApplicationPaging01</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>

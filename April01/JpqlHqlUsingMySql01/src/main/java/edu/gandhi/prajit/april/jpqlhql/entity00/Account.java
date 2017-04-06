@@ -18,6 +18,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -42,7 +43,7 @@ public class Account {
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "USER_ACCOUNT", joinColumns = @JoinColumn(name = "ACCOUNT_ID"), inverseJoinColumns = @JoinColumn(name = "USER_ID"))
 	private Set<User> users = new HashSet<>();
-	/*@ManyToOne*/
+	@ManyToOne
 	/*@ManyToOne(fetch=FetchType.LAZY)*/
 	@JoinColumn(name = "BANK_ID")
 	private Bank bank;
