@@ -18,12 +18,22 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import edu.gandhi.prajit.april.dao.util.QueryConstant;
+
 @Entity
 @Table(name = "ACCOUNT")
+/** We Can Use Any One Of Them,Either Jpa Or Hibernate Annotation */
+@javax.persistence.NamedQueries({
+		@javax.persistence.NamedQuery(name = QueryConstant.AccountJpaDepositAbove500, query = "Select distinct transaction.account From Transaction transaction Where transaction.amount > 500 and lower(transaction.transactionType)='deposit'"),
+		@javax.persistence.NamedQuery(name = QueryConstant.AccountJpaNameBankState, query = "Select distinct transaction.account.name,concat(concat(transaction.account.bank.name,'~'),transaction.account.bank.address.state) "
+				+ "From Transaction transaction Where transaction.amount > :amount and transaction.transactionType=?1")
+})
+@org.hibernate.annotations.NamedQueries({
+		@org.hibernate.annotations.NamedQuery(name = QueryConstant.AccountHibernateDepositAbove500, query = "Select distinct transaction.account From Transaction transaction Where transaction.amount > 500 and lower(transaction.transactionType)='deposit'") 
+})
 public class Account {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,7 +42,8 @@ public class Account {
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "USER_ACCOUNT", joinColumns = @JoinColumn(name = "ACCOUNT_ID"), inverseJoinColumns = @JoinColumn(name = "USER_ID"))
 	private Set<User> users = new HashSet<>();
-	@ManyToOne
+	/*@ManyToOne*/
+	/*@ManyToOne(fetch=FetchType.LAZY)*/
 	@JoinColumn(name = "BANK_ID")
 	private Bank bank;
 	@Enumerated(EnumType.STRING)
