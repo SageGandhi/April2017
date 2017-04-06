@@ -64,7 +64,16 @@
 				</executions>
 				<configuration>
 					<commandlineArgs>-Duser.language=en -Duser.country=EN</commandlineArgs>
-					<!-- <mainClass></mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.HqlApplication00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.JpqlApplication00</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.HqlApplication01</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.JpqlApplication01</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.HqlApplication02</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.JpqlApplication02</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.HqlApplication03</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.JpqlApplication03</mainClass> -->
+					<!-- <mainClass>edu.gandhi.prajit.april.main.jpqlhql.HqlApplication04</mainClass> -->
+					<mainClass>edu.gandhi.prajit.april.main.jpqlhql.JpqlApplication04</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>

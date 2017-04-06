@@ -58,180 +58,221 @@ public class Account {
 	private Date createdDate;
 	@Column(name = "CREATED_BY")
 	private String createdBy;
+
 	/**
 	 * @return the accountId
 	 */
 	public final Long getAccountId() {
 		return accountId;
 	}
+
 	/**
-	 * @param accountId the accountId to set
+	 * @param accountId
+	 *            the accountId to set
 	 */
 	public final void setAccountId(Long accountId) {
 		this.accountId = accountId;
 	}
+
 	/**
 	 * @return the users
 	 */
 	public final Set<User> getUsers() {
 		return users;
 	}
+
 	/**
-	 * @param users the users to set
+	 * @param users
+	 *            the users to set
 	 */
 	public final void setUsers(Set<User> users) {
 		this.users = users;
 	}
+
 	/**
 	 * @return the bank
 	 */
 	public final Bank getBank() {
 		return bank;
 	}
+
 	/**
-	 * @param bank the bank to set
+	 * @param bank
+	 *            the bank to set
 	 */
 	public final void setBank(Bank bank) {
 		this.bank = bank;
 	}
+
 	/**
 	 * @return the accountType
 	 */
 	public final AccountType getAccountType() {
 		return accountType;
 	}
+
 	/**
-	 * @param accountType the accountType to set
+	 * @param accountType
+	 *            the accountType to set
 	 */
 	public final void setAccountType(AccountType accountType) {
 		this.accountType = accountType;
 	}
+
 	/**
 	 * @return the transactions
 	 */
 	public final List<Transaction> getTransactions() {
 		return transactions;
 	}
+
 	/**
-	 * @param transactions the transactions to set
+	 * @param transactions
+	 *            the transactions to set
 	 */
 	public final void setTransactions(List<Transaction> transactions) {
 		this.transactions = transactions;
 	}
+
 	/**
 	 * @return the name
 	 */
 	public final String getName() {
 		return name;
 	}
+
 	/**
-	 * @param name the name to set
+	 * @param name
+	 *            the name to set
 	 */
 	public final void setName(String name) {
 		this.name = name;
 	}
+
 	/**
 	 * @return the initialBalance
 	 */
 	public final BigDecimal getInitialBalance() {
 		return initialBalance;
 	}
+
 	/**
-	 * @param initialBalance the initialBalance to set
+	 * @param initialBalance
+	 *            the initialBalance to set
 	 */
 	public final void setInitialBalance(BigDecimal initialBalance) {
 		this.initialBalance = initialBalance;
 	}
+
 	/**
 	 * @return the currentBalance
 	 */
 	public final BigDecimal getCurrentBalance() {
 		return currentBalance;
 	}
+
 	/**
-	 * @param currentBalance the currentBalance to set
+	 * @param currentBalance
+	 *            the currentBalance to set
 	 */
 	public final void setCurrentBalance(BigDecimal currentBalance) {
 		this.currentBalance = currentBalance;
 	}
+
 	/**
 	 * @return the openDate
 	 */
 	public final Date getOpenDate() {
 		return openDate;
 	}
+
 	/**
-	 * @param openDate the openDate to set
+	 * @param openDate
+	 *            the openDate to set
 	 */
 	public final void setOpenDate(Date openDate) {
 		this.openDate = openDate;
 	}
+
 	/**
 	 * @return the closeDate
 	 */
 	public final Date getCloseDate() {
 		return closeDate;
 	}
+
 	/**
-	 * @param closeDate the closeDate to set
+	 * @param closeDate
+	 *            the closeDate to set
 	 */
 	public final void setCloseDate(Date closeDate) {
 		this.closeDate = closeDate;
 	}
+
 	/**
 	 * @return the lastUpdatedDate
 	 */
 	public final Date getLastUpdatedDate() {
 		return lastUpdatedDate;
 	}
+
 	/**
-	 * @param lastUpdatedDate the lastUpdatedDate to set
+	 * @param lastUpdatedDate
+	 *            the lastUpdatedDate to set
 	 */
 	public final void setLastUpdatedDate(Date lastUpdatedDate) {
 		this.lastUpdatedDate = lastUpdatedDate;
 	}
+
 	/**
 	 * @return the lastUpdatedBy
 	 */
 	public final String getLastUpdatedBy() {
 		return lastUpdatedBy;
 	}
+
 	/**
-	 * @param lastUpdatedBy the lastUpdatedBy to set
+	 * @param lastUpdatedBy
+	 *            the lastUpdatedBy to set
 	 */
 	public final void setLastUpdatedBy(String lastUpdatedBy) {
 		this.lastUpdatedBy = lastUpdatedBy;
 	}
+
 	/**
 	 * @return the createdDate
 	 */
 	public final Date getCreatedDate() {
 		return createdDate;
 	}
+
 	/**
-	 * @param createdDate the createdDate to set
+	 * @param createdDate
+	 *            the createdDate to set
 	 */
 	public final void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
+
 	/**
 	 * @return the createdBy
 	 */
 	public final String getCreatedBy() {
 		return createdBy;
 	}
+
 	/**
-	 * @param createdBy the createdBy to set
+	 * @param createdBy
+	 *            the createdBy to set
 	 */
 	public final void setCreatedBy(String createdBy) {
 		this.createdBy = createdBy;
 	}
+
 	@Override
 	public String toString() {
 		return "Account [" + (accountId != null ? "accountId=" + accountId + ", " : "")
-				+ (users != null ? "users=" + users + ", " : "") + (bank != null ? "bank=" + bank + ", " : "")
 				+ (accountType != null ? "accountType=" + accountType + ", " : "")
-				+ (transactions != null ? "transactions=" + transactions + ", " : "")
 				+ (name != null ? "name=" + name + ", " : "")
 				+ (initialBalance != null ? "initialBalance=" + initialBalance + ", " : "")
 				+ (currentBalance != null ? "currentBalance=" + currentBalance + ", " : "")
