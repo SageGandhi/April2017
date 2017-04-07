@@ -5,5 +5,5 @@
 ###Scrum Practice Provides Better Business Value(Recoup(Something Lost/Expended) Cost Sooner & Lessen Overall Investment).Reduce Risk:Create A Product Thet Is Ready To Ship At Any Moment.More Transparency: Convey The Teams True Status To Project StackHolders.
 
 ###Done Simple Definition:Done Means It Is Live In Production & My Customer Use It.Commitment:Commiting To A Specific Amount Of Work At The Begining Of Each Sprint.Cross-Functional Team Works Closely Together,Increasing Their Overall Capability.Sprint Is The HeartBeat Of Scrum.HappilyDeliveringHappyness.
-####Impact Mapping Concentrate Goal/Vision->Relavant People Called Actors->Impact To Behavior Of These Actor->Features Of The Software Called Deliverables.Maximum Impact By Minimum Deliverables
+####Impact Mapping Concentrate Goal/Vision->Relavant People Called Actors->Impact To Behavior Of These Actor->Features Of The Software Called Deliverables.Maximum Impact By Minimum Deliverables.
 
