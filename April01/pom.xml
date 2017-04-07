@@ -13,6 +13,8 @@
 		<module>JpaHibernateUsingMySql02</module>
 		<module>DaoPattern</module>
 		<module>JpqlHqlUsingMySql01</module>
+		
+		<module>ScrumPractice</module>
 	</modules>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
