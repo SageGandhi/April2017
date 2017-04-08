@@ -1,4 +1,4 @@
-###Pictures Are Taken From LeanPitch Course & Web Without Any Intention To Break Copyright Law:
+###Pictures Are Taken From LeanPitch Course & Web Without Any Intention To Breaking Copyright Law:
 ###Agile Coach:Agile Coach Articulates(Pronounce Clearly & Distinctly) 3 Levels Of Developments.Level 1: Agile Team Facilitator:ScrumMaster/Kanban Coach/Iteration Manager Who Help Teams To Use Agile Practices Well.Facilitation Unlocks Self-Organization,Empowerment,Creativity.Its Makes Ho-Hum Participation To True Team Ownership & Momentum.Level 2: Agile Coach:An Agile Coach Operates At The Multi-Team Level,Engage The Forces Within/OutSide Teams That Hinder Agile Philosophy Promise.Skills Are Teaching,Mentoring,Facilitating,Professional Coching.Level 3: Enterprise Agile Coach:Enterprise Agile Coach Have The Knowledge,Credibility(The Quality Of Being Convincing&Believable),Deep Coaching Skill Needed To Directly Coach The LeaderShip Team In The Organization.
 
 ###Resource:Agile Manifesto: http://agilemanifesto.org/.Scrum Guides: http://scrumguides.org/.eXtreme Programming Explained: Embrace Change. Kent Beck & Cynthia Andres[Todo Read The Book]
