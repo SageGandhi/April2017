@@ -8,13 +8,12 @@
 	<name>WorkSpaceFor April First</name>
 	<modules>
 		<module>JpaHibernateUsingDerby</module>
-		
 		<module>JpaHibernateUsingMySql01</module>
 		<module>JpaHibernateUsingMySql02</module>
 		<module>DaoPattern</module>
 		<module>JpqlHqlUsingMySql01</module>
-		
 		<module>ScrumPractice</module>
+		<module>SpringRecipe01</module>
 	</modules>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
