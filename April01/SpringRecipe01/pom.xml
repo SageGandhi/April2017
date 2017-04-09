@@ -13,5 +13,14 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<dozer.mapper.version>5.5.1</dozer.mapper.version>
 	</properties>
+	<dependencies>
+		<!-- Learn How To Use Dozer -->
+		<dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+			<version>${dozer.mapper.version}</version>
+		</dependency>
+	</dependencies>
 </project>
