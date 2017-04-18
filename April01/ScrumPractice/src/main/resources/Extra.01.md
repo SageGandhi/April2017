@@ -2,3 +2,5 @@
 ####A Framework Within Which People Can Address Complex Adaptative Problems While Productively & Creatively Delivering Products Of The Highest Possible Values.Adm:Adaptative Development Methodology Used In Sales Force.
 ####JustInTimeManufacturing:Making Only What Was Needed,Only When It Was Needed,Only In The Amount Needed.Lean Principle Eliminate Waste:Toyota System,Muda(UnProductive),Mura(UnEvenness,InConsistency),Muri(OverBurden, UnResonableness).KeepItSimpleStupid(Kiss Principle Agile).
 ####MicroManagement:Manager Closely Observes&Controls The Work Of SubOrdinates & Employess.
+###ScrumMasters Manage Scrum Process(Defines Practices,Meetings,Artifact,Terminology) Like SheepDog.Banning Interference During Sprint(Protecting Team & Its Work).Responsive During Sprint Planning Meeting.
+###Product Owner Focus On Return On Investment.Create Product Backlog With Highest Priority Given To Those Requirements That Are Of Highest Value To Business. 
