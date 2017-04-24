@@ -3,21 +3,24 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<bean name="UserRepository00"
-		class="edu.gandhi.prajit.april.xml01.repo.impl.UserRepositoryImpl" />
+		class="edu.gandhi.prajit.april.xml01.repo.impl.UserRepositoryImpl"
+		scope="singleton" />
 	<bean name="UserService00"
-		class="edu.gandhi.prajit.april.xml01.service.impl.UserServiceImpl">
+		class="edu.gandhi.prajit.april.xml01.service.impl.UserServiceImpl"
+		scope="singleton">
 		<property name="userRepository" ref="UserRepository00"></property>
 	</bean>
 	<bean name="UserService01"
-		class="edu.gandhi.prajit.april.xml01.service.impl.UserServiceImpl">
+		class="edu.gandhi.prajit.april.xml01.service.impl.UserServiceImpl"
+		scope="singleton">
 		<constructor-arg index="0" ref="UserRepository00" />
 	</bean>
 	<bean name="UserService02"
 		class="edu.gandhi.prajit.april.xml01.service.impl.UserServiceImpl"
-		autowire="constructor">
+		scope="singleton" autowire="constructor">
 	</bean>
 	<bean name="UserService03"
 		class="edu.gandhi.prajit.april.xml01.service.impl.UserServiceImpl"
-		autowire="byType"><!-- Goes By Type Of The Setter -->
+		scope="singleton" autowire="byType"><!-- Goes By Type Of The Setter -->
 	</bean>
 </beans>

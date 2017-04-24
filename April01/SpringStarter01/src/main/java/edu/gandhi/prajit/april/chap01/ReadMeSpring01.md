@@ -1,1 +1,0 @@
-Difference Between HashMap&Registry:

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:property-placeholder location="Application00.properties" /><!-- 
+		Once Loaded We Can Use Using ${PropKey} -->
+	<context:component-scan base-package="edu.gandhi.prajit.april.xml01"></context:component-scan>	
+	<bean name="PropertyHolderInjectionBean00" class="edu.gandhi.prajit.april.xml01.PropertyHolderInjectionBean00"></bean>
+	<bean name="PropertyHolderInjectionBean01" class="edu.gandhi.prajit.april.xml01.PropertyHolderInjectionBean00">
+		<property name="firstName" value="${Dev.FirstName}"></property>
+		<property name="lastName" value="${Dev.LastName}"></property>
+		<property name="emailAddress" value="${Dev.Email}"></property>		
+	</bean>
+</beans>
