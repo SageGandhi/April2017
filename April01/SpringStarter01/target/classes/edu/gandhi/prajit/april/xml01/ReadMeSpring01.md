@@ -3,3 +3,4 @@ Default Name Of ApplicationContext.xml Is applicationContext.xml.
 @Repository--Data Layer,@Service--Service/Business Logic Layer,@Component--Any Spring Bean.
 ###?How To Define Multiple Bean Using@Repository,@Service,@Component?  
 ####Jsr-330 Is Dependency Injection For Java
+Bean Scope:Singleton,Prototype,Request,Session,Global

@@ -3,12 +3,15 @@ package edu.gandhi.prajit.april.aw.javacfg.repo.impl;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
 import edu.gandhi.prajit.april.aw.javacfg.repo.UserRepository;
 import edu.gandhi.prajit.april.data.model.User00;
 
-@Repository("UserRepositoryBean")
+@Repository
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class UserRepositoryImpl implements UserRepository {
 	/**
 	 * 
