@@ -9,9 +9,8 @@ import edu.gandhi.prajit.april.data.model.User00;
 import edu.gandhi.prajit.april.javacfg.service.UserService;
 
 public class AppMainJavaConfig00 {
-
 	public static void main(String[] args) throws Exception {
-		final ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig01.class);
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig01.class);
 
 		applicationContext.getBean("UserServiceBeanConstructor", UserService.class).getListOfUser()
 				.forEach((User00 userTmp) -> {
@@ -24,5 +23,4 @@ public class AppMainJavaConfig00 {
 
 		((AnnotationConfigApplicationContext) applicationContext).close();
 	}
-
 }
