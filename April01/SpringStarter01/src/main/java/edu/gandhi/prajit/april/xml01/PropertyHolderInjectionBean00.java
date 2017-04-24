@@ -1,13 +1,15 @@
 package edu.gandhi.prajit.april.xml01;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PropertyHolderInjectionBean00 {
-	/**Prperty Value Will Be Injected From Property File For Corr. Prop Key*/
+	/** Prperty Value Will Be Injected From Property File For Corr. Prop Key */
 	@Value("${Dev.FirstName}")
 	private String firstName;
 	@Value("${Dev.LastName}")
-	private String lastName;	
+	private String lastName;
 	@Value("${Dev.Email}")
 	private String emailAddress;
 
