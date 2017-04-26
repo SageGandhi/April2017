@@ -84,9 +84,6 @@
 	<profiles>
 		<profile>
 			<id>EclipseLink</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
 			<dependencies>
 				<dependency>
 					<groupId>org.eclipse.persistence</groupId>
@@ -97,6 +94,9 @@
 		</profile>
 		<profile>
 			<id>Hibernate</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<dependencies>
 				<dependency>
 					<groupId>org.hibernate</groupId>
